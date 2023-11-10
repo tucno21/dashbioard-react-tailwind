@@ -1,0 +1,9 @@
+{
+    "status": false,
+    "msg": {
+        "title": "El titulo es obligatorio y usa mayuscula",
+        "content": "La descripcion es obligatoria",
+        "category": "la categoria es requerida",
+        "photo": "la foto es obligatoria"
+    }
+}
