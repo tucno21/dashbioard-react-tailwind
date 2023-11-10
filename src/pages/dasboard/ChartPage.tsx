@@ -5,6 +5,27 @@ import PieChart from "./chart/PieChart"
 
 
 const ChartPage = () => {
+
+    const menses = [
+        'Enero',
+        'Febrero',
+        'Marzo',
+        'Abril',
+        'Mayo',
+        'Junio',
+        'Julio',
+        'Agosto',
+        'Septiembre',
+        'Octubre',
+        'Noviembre',
+        'Diciembre',
+    ];
+
+    const beneficios = [10, 56, 30, 78, 90, 45, 78, 90, 45, 78, 90, 45,]
+
+    const colors = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+    const cantidad = [12, 19, 3, 5, 2, 3];
+
     return (
         <div className="space-y-1 mx-auto">
             {/* CABECERA */}
@@ -23,25 +44,25 @@ const ChartPage = () => {
                     <div className="w-full bg-white  rounded-md p-2 shadow border">
                         <h3>Grafico de lineas básico</h3>
                         <div className="w-full">
-                            <LineChart />
+                            <LineChart dataNumbers={beneficios} dataLabels={menses} />
                         </div>
                     </div>
                     <div className="w-full bg-white  rounded-md p-2 shadow border">
                         <h3>Grafico de barras</h3>
                         <div className="w-full">
-                            <BarChart />
+                            <BarChart dataNumbers={beneficios} dataLabels={menses} />
                         </div>
                     </div>
                     <div className="w-full bg-white  rounded-md p-2 shadow border">
                         <h3>Grafico de circular</h3>
                         <div className="w-full">
-                            <PieChart />
+                            <PieChart dataNumbers={cantidad} dataLabels={colors} />
                         </div>
                     </div>
                     <div className="w-full bg-white  rounded-md p-2 shadow border">
                         <h3>Grafico de barras horizontal</h3>
                         <div className="w-full">
-                            <BarChartH />
+                            <BarChartH dataNumbers={beneficios} dataLabels={menses} />
                         </div>
                     </div>
                 </div>
