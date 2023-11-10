@@ -66,7 +66,7 @@ const color = {
     success: '#07BC0C',
     error: '#E74C3C',
     warning: '#F1C40F',
-    info: '#3498DB',
+    info: '#3498DB'
 }
 
 const styleStatus = {
@@ -74,17 +74,17 @@ const styleStatus = {
     error: ['border-none', `bg-[${color.error}]`, 'text-white'],
     warning: ['border-none', `bg-[${color.warning}]`, 'text-white'],
     info: ['border-none', `bg-[${color.info}]`, 'text-white'],
-};
+}
 
 const styleStatusBorder = {
-    success: [`border-[${color.success}]`, `bg-green-50`, `text-[${color.success}]`],
-    error: [`border-[${color.error}]`, `bg-red-50`, `text-[${color.error}]`],
-    warning: [`border-[${color.warning}]`, `bg-yellow-50`, `text-[${color.warning}]`],
-    info: [`border-[${color.info}]`, `bg-blue-50`, `text-[${color.info}]`],
+    success: [`border-[${color.success}]`, 'bg-green-50', `text-[${color.success}]`],
+    error: [`border-[${color.error}]`, 'bg-red-50', `text-[${color.error}]`],
+    warning: [`border-[${color.warning}]`, 'bg-yellow-50', `text-[${color.warning}]`],
+    info: [`border-[${color.info}]`, 'bg-blue-50', `text-[${color.info}]`],
 }
 
 
-const createHtmlToast = (status: Toast["status"], message: Toast["message"], bgColor: Toast["bgColor"]) => {
+const createHtmlToast = (status: Toast["status"], message: Toast["message"], bgColor: boolean) => {
     const body = document.querySelector("body");
 
     // Crear el elemento contenedor principal <div class="fixed top-10 right-2 z-50">
@@ -95,7 +95,28 @@ const createHtmlToast = (status: Toast["status"], message: Toast["message"], bgC
 
     // Crear el elemento secundario 
     const childDiv = document.createElement("div");
-    childDiv.classList.add("animation-sacudiendo", "flex", "justify-center", "items-center", "gap-2", "px-3", "py-2", "text-sm", "border", "rounded-lg", "max-w-sm", "shadow-lg", ...(bgColor ? styleStatus[status] : styleStatusBorder[status]));
+    childDiv.classList.add(
+        "animation-sacudiendo",
+        "flex",
+        "justify-center",
+        "items-center",
+        "gap-2", "px-3", "py-2",
+        "text-sm",
+        "border",
+        "rounded-lg",
+        "max-w-sm",
+        "shadow-lg",
+        // ...(bgColor ? styleStatus[status] : styleStatusBorder[status])
+    );
+    if (bgColor) {
+        childDiv.classList.add(
+            ...styleStatus[status]
+        );
+    } else {
+        childDiv.classList.add(
+            ...styleStatusBorder[status]
+        );
+    }
 
     const svg = alertIcon(status, 35, 35);
 

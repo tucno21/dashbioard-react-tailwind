@@ -11,9 +11,18 @@ const ToastPage = () => {
     const warning = () => toast.warning('tenemos un aviso');
     const info = () => toast.info('tenemos una info');
 
-    const custom = () => {
-        toastPersonalizado({ status: 'info', message: 'success toast  ', bgColor: true });
+    const customSuccess = () => {
+        toastPersonalizado({ status: 'success', message: 'Color de estado correcto...', bgColor: false });
     };
+    const customError = () => {
+        toastPersonalizado({ status: 'error', message: 'Color de estado error...' });
+    }
+    const customWarning = () => {
+        toastPersonalizado({ status: 'warning', message: 'Color de estado warning...', bgColor: false });
+    }
+    const customInfo = () => {
+        toastPersonalizado({ status: 'info', message: 'Color de estado info...' });
+    }
 
     return (
         <div className="space-y-1 mx-auto">
@@ -30,14 +39,17 @@ const ToastPage = () => {
             {/* INFORMACIO PAGE */}
             <div className="px-1 py-1 md:px-2 md:py-2 w-full">
                 <div className="flex flex-col gap-3">
-                    <div className="">
+                    <div className="flex gap-2">
                         <button className="btn btn-outline-success" onClick={success}>Success</button>
                         <button className="btn btn-outline-danger" onClick={error}>error</button>
                         <button className="btn btn-outline-warning" onClick={warning}>warning</button>
                         <button className="btn btn-outline-info" onClick={info}>info</button>
                     </div>
-                    <div className="">
-                        <button className="btn btn-outline-info" onClick={custom}>Toast Custom</button>
+                    <div className="flex gap-2">
+                        <button className="btn btn-outline-success" onClick={customSuccess}>Toast Custom Success</button>
+                        <button className="btn btn-outline-danger" onClick={customError}>Toast Custom error</button>
+                        <button className="btn btn-outline-warning" onClick={customWarning}>Toast Custom warning</button>
+                        <button className="btn btn-outline-info" onClick={customInfo}>Toast Custom info</button>
                     </div>
                 </div>
 
