@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-// import './Carousel.css';
 
 interface Props {
     children: React.ReactNode;
