@@ -209,13 +209,13 @@
 
     /* BADGE */
     .badge {
-		@apply text-sm px-[0.5rem] py-[0.10rem] rounded-full font-medium;
+		@apply text-xs px-[0.6rem] py-[0.15rem] rounded-full font-medium mx-0.5;
 	}
     .badge-sm {
-		@apply text-[0.7rem] px-[0.3rem] py-[0.1rem] rounded-full font-medium;
+		@apply text-[0.65rem] px-[0.5rem] py-[0.1rem] rounded-full font-medium mx-0.5;
 	}
 	.badge-lg {
-		@apply text-base px-[0.5rem] py-[0.10rem] rounded-full font-medium;
+		@apply text-sm px-[0.7rem] py-[0.18rem] rounded-full font-medium mx-0.5;
 	}
 
 	.badge-primary {
@@ -244,6 +244,30 @@
 
 	.badge-dark {
 		@apply text-white bg-[#313a46] border-transparent;
+	}
+
+    .badge-line-primary {
+		@apply text-[#727cf5] bg-[#f8f8f8] border border-[#727cf5];
+	}
+
+	.badge-line-success {
+		@apply text-[#0acf97] bg-[#f8f8f8] border border-[#0acf97];
+	}
+
+	.badge-line-danger {
+		@apply text-[#fa5c7c] bg-[#f8f8f8] border border-[#fa5c7c];
+	}
+
+	.badge-line-warning {
+		@apply text-[#ffc35a] bg-[#f8f8f8] border border-[#ffc35a];
+	}
+
+	.badge-line-info {
+		@apply text-[#39afd1] bg-[#f8f8f8] border border-[#39afd1];
+	}
+
+	.badge-line-dark {
+		@apply text-[#313a46] bg-[#f8f8f8] border border-[#313a46];
 	}
     /* BADGE */
 
