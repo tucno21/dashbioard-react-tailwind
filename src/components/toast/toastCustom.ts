@@ -62,25 +62,25 @@ const toastPersonalizado = ({ status, message, timer = 4000, bgColor = true }: T
 
 export default toastPersonalizado;
 
-const color = {
-    success: '#07BC0C',
-    error: '#E74C3C',
-    warning: '#F1C40F',
-    info: '#3498DB'
-}
+// const color = {
+//     success: '#07BC0C',
+//     error: '#E74C3C',
+//     warning: '#F1C40F',
+//     info: '#3498DB'
+// }
 
 const styleStatus = {
-    success: ['border-none', `bg-[${color.success}]`, 'text-white'],
-    error: ['border-none', `bg-[${color.error}]`, 'text-white'],
-    warning: ['border-none', `bg-[${color.warning}]`, 'text-white'],
-    info: ['border-none', `bg-[${color.info}]`, 'text-white'],
+    success: ['border-none', `bg-[#07BC0C]`, 'text-white'],
+    error: ['border-none', `bg-[#E74C3C]`, 'text-white'],
+    warning: ['border-none', `bg-[#F1C40F]`, 'text-white'],
+    info: ['border-none', `bg-[#3498DB]`, 'text-white'],
 }
 
 const styleStatusBorder = {
-    success: [`border-[${color.success}]`, 'bg-green-50', `text-[${color.success}]`],
-    error: [`border-[${color.error}]`, 'bg-red-50', `text-[${color.error}]`],
-    warning: [`border-[${color.warning}]`, 'bg-yellow-50', `text-[${color.warning}]`],
-    info: [`border-[${color.info}]`, 'bg-blue-50', `text-[${color.info}]`],
+    success: [`border-[#07BC0C]`, 'bg-green-50', `text-[#07BC0C]`],
+    error: [`border-[#E74C3C]`, 'bg-red-50', `text-[#E74C3C]`],
+    warning: [`border-[#F1C40F]`, 'bg-yellow-50', `text-[#F1C40F]`],
+    info: [`border-[#3498DB]`, 'bg-blue-50', `text-[#3498DB]`],
 }
 
 
